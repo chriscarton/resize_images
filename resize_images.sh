@@ -19,7 +19,7 @@ do
 
     width=`identify -ping -format %w $FILE`
     
-    if [ $width -gt $format ]
+    if [ $width -gt $format -o $width -eq $format ]
     then
         echo "Le fichier $FILE a été redimensionné à $format pixels de large dans le sous-dossier $format"
         echo "---"
